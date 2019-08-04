@@ -4,95 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:alpha="1"
-    android:visibility="visible"
-    tools:context=".MainActivity">
+    tools:context=".SignUpAndLogin">
 
     <EditText
-        android:id="@+id/editTxt1"
-        android:layout_width="0dp"
+        android:id="@+id/SignUpName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
-        android:hint="Enter the name"
-        android:shadowColor="#E91717"
-        android:textColorHint="#FF0000"
+        android:ems="10"
+        android:hint="Enter your name..."
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTxt2"
-        android:layout_width="0dp"
+        android:id="@+id/SignUpPass"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:alpha="1"
         android:ems="10"
-        android:hint="Enter punch speed"
-        android:textColorHint="#FC0000"
-        android:visibility="visible"
+        android:hint="password"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTxt1" />
+        app:layout_constraintTop_toBottomOf="@+id/SignUpName" />
+
+    <Button
+        android:id="@+id/SignUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="Sign UP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpPass" />
 
     <EditText
-        android:id="@+id/editTxt3"
-        android:layout_width="0dp"
+        android:id="@+id/LogInName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="username"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpBtn" />
+
+    <EditText
+        android:id="@+id/LogInPass"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
-        android:alpha="1"
         android:ems="10"
-        android:hint="Enter punch power"
-        android:textColorHint="#FF0000"
-        android:visibility="visible"
+        android:hint="password"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTxt2" />
+        app:layout_constraintTop_toBottomOf="@+id/LogInName" />
 
     <Button
-        android:id="@+id/btnId1"
+        android:id="@+id/LogInBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
-        android:text="Save info on the server"
+        android:text="LOG IN"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTxt3" />
-
-    <Button
-        android:id="@+id/btnId2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="get all  kickboxers from server"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnId1" />
-
-    <Button
-        android:id="@+id/switchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="8dp"
-        android:background="#00FF01"
-        android:padding="16dp"
-        android:text="GO TO LOGIN PAGE"
-        android:textColor="#9700B1"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnId2" />
+        app:layout_constraintTop_toBottomOf="@+id/LogInPass" />
 </androidx.constraintlayout.widget.ConstraintLayout>

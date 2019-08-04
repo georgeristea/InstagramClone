@@ -1,15 +1,15 @@
 package com.risteageorge.instagramclone;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -20,7 +20,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     EditText editText1, editText2, editText3;
-    Button btn1, btn2;
+    Button btn1, btn2, switchBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         btn1 = findViewById(R.id.btnId1);
         btn2 = findViewById(R.id.btnId2);
+        switchBtn = findViewById(R.id.switchBtn);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +87,17 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
+        switchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, SignUpAndLogin.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 }
